@@ -18,6 +18,12 @@ file1.data;
 // => [ {name: 'george'}, {name: 'suzy'} ]
 ```
 
+gulp-pluck takes two optional parameters:
+
+`propName` which defaults to `data`. `propName` tells `gulp-pluck` which property to operate on.
+
+`fileName` will give the file a new name. `fileName` defaults to the first file name to pass through the function.
+
 ## Usage
 
 First, install `gulp-pluck` as a development dependency:
