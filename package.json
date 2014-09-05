@@ -1,7 +1,7 @@
 {
   "name": "gulp-pluck",
   "description": "Pluck function for gulp file properties.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/jon49/gulp-pluck",
   "repository": "git://github.com/jon49/gulp-pluck.git",
   "main": "./index.js",

@@ -18,32 +18,37 @@ file1.data;
 // => [ {name: 'george'}, {name: 'suzy'} ]
 ```
 
+## Usage
+
+### Install
+
+First, install `gulp-pluck` as a development dependency:
+
+    npm install --save-dev gulp-data
+
+### Parameters
+
 gulp-pluck takes two optional parameters:
 
 `propName` which defaults to `data`. `propName` tells `gulp-pluck` which property to operate on.
 
 `fileName` will give the file a new name. `fileName` defaults to the first file name to pass through the function.
 
-## Usage
-
-First, install `gulp-pluck` as a development dependency:
-
-    npm install --save-dev gulp-data
+### Example
 
 Then, add it to your gulpfile.js:
 
 ```javascript
-var gulp = require('gulp');
-var data = require('gulp-data');
-var pluck = require('gulp-pluck');
-var frontMatter = require('gulp-front-matter');
+var gulp = require('gulp')
+var data = require('gulp-data')
+var pluck = require('gulp-pluck')
+var frontMatter = require('gulp-front-matter')
 
 gulp.task('front-matter-to-json', function(){
   return gulp.src('./posts/*.md')
   .pipe(frontMatter({property: 'meta'}))
   .pipe(data(function(file){
-    file.meta.path = file.path;
-    return file;
+    file.meta.path = file.path
   }))
   .pipe(pluck('meta', 'posts-metadata.json'))
   .pipe(data(function(file){
