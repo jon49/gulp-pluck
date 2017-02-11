@@ -15,7 +15,7 @@
     "test": "jasmine-node"
   },
   "engines": {
-    "node": ">= ?"
+    "node": ">=0.12"
   },
   "author": "Jon Nyman",
   "license": "MIT",
