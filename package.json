@@ -12,7 +12,7 @@
     "gulpplugin"
   ],
   "scripts": {
-    "test": "jasmine-node"
+    "test": "jasmine-node ."
   },
   "engines": {
     "node": ">=0.12"
