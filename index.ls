@@ -1,6 +1,5 @@
 path = require 'path'
-gutil = require 'gulp-util'
-PluginError = gutil.PluginError
+PluginError = require 'plugin-error'
 reduce = require 'stream-reduce'
 
 module.exports = (propName, fileName) ->
@@ -26,7 +25,7 @@ module.exports = (propName, fileName) ->
       | file.isStream! =>  # doh!
          @emit (
             'error'
-            new PluginError 'gulp-pluck', 'Streaming not supported'
+            new PluginError 'gulp-pluck', {message: 'Streaming not supported'}
          )
       | plucked =>         # append new property value
          appendProp plucked, file, propName_
